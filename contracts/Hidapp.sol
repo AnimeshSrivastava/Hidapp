@@ -7,6 +7,10 @@ contract Hidapp {
   string description;
   uint256 price;
 
+  // constructor
+  function Hidapp() public {
+    storeReport("Default report", "This is a report set by defualt", 1000000000000000000);
+  }
   // store a report
   function storeReport(string _name, string _description, uint256 _price) public {
     dataProvider = msg.sender; // storing the address of the profile calling the storeReport function
